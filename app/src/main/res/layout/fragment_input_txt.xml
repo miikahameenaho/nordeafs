@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mixu.nordeafs.InputTxtFragment">
+
+    <EditText
+        android:id="@+id/InputSearchQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A4A4A4"
+        android:background="#1C1C1C"
+        android:textSize="18sp"
+        android:hint="@string/search_query_hint"
+        android:textCursorDrawable="@null"
+        android:singleLine = "true"
+        />
+
+</FrameLayout>
