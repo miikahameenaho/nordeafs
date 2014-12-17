@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2014. Miika Hämeenaho - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Miika Hämeenaho <miika.hameenaho@ovi.com>
+ */
+
 package com.example.mixu.nordeafs;
 
 import android.app.Activity;
@@ -175,7 +182,7 @@ public class VenueListFragment extends ListFragment {
 
         @Override
         protected String doInBackground(View... urls) {
-            String url = null;
+            String url;
             /* If search query has been defined we use that, otherwise we search all the nearest
              * venues
              */
@@ -201,7 +208,7 @@ public class VenueListFragment extends ListFragment {
         protected void onPostExecute(String result) {
             if (temp != null) {
                 // parseFSData venues search result
-                venuesList = (ArrayList<FSVenue>) parseFSData(temp);
+                venuesList = parseFSData(temp);
 
                 myAdapter = new VenueAdapter(getActivity(), R.layout.row_layout, venuesList);
                 setListAdapter(myAdapter);
@@ -224,7 +231,7 @@ public class VenueListFragment extends ListFragment {
             // buffer input stream the result
             BufferedInputStream bis = new BufferedInputStream(is);
             ByteArrayBuffer baf = new ByteArrayBuffer(20);
-            int current = 0;
+            int current;
             while ((current = bis.read()) != -1) {
                 baf.append((byte) current);
             }
@@ -246,7 +253,7 @@ public class VenueListFragment extends ListFragment {
     }
 
     private static ArrayList<FSVenue> parseFSData(final String response) {
-        ArrayList<FSVenue> temp = new ArrayList<FSVenue>();
+        ArrayList<FSVenue> temp = new ArrayList<>();
         try {
             JSONObject jsonObject = new JSONObject(response);
 
@@ -285,7 +292,7 @@ public class VenueListFragment extends ListFragment {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            return new ArrayList<FSVenue>();
+            return new ArrayList<>();
         }
         return temp;
     }

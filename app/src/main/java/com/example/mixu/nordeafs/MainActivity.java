@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2014. Miika Hämeenaho - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Miika Hämeenaho <miika.hameenaho@ovi.com>
+ */
+
 package com.example.mixu.nordeafs;
 
 import android.support.v7.app.ActionBarActivity;

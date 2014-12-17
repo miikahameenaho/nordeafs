@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2014. Miika Hämeenaho - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Miika Hämeenaho <miika.hameenaho@ovi.com>
+ */
+
 package com.example.mixu.nordeafs;
 
 import android.app.Activity;
@@ -26,7 +33,7 @@ public class VenueAdapter extends ArrayAdapter<FSVenue>{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
-        VenueHolder holder = null;
+        VenueHolder holder;
 
         if(row == null)
         {
